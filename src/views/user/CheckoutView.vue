@@ -4,7 +4,7 @@ import { RouterLink, useRouter } from 'vue-router';
 
 import UserLayout from '@/layouts/UserLayout.vue';
 
-import { useUserCartStore } from '@/stores/user/cart';
+import { useUserCartStore } from '../../stores/user/cart';
 
 const userCartStore = useUserCartStore()
 
@@ -49,7 +49,7 @@ const payment = () => {
                         </div>
                         <input v-model="userCheckoutData[form.field]" type="text" placeholder="Type here" class="input input-bordered w-full " />
                     </label>
-                    <button @click="payment" class="btn btn btn-block bg-black text-white bg-black text-white mt-4">ชำระเงิน</button>
+                    <button @click="payment" class="btn btn-block bg-black text-white mt-4">ชำระเงิน</button>
                 </section>
                 <section class="flex-auto w-32 bg-slate-200 p-4 px-2">
                     <div v-for="item in userCartStore.items" class="flex bg-white m-8 py-4">

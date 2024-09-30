@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue';
 
 import UserLayout from '@/layouts/UserLayout.vue';
 
-import { useUserCartStore } from '@/stores/user/cart';
+import { useUserCartStore } from '../../stores/user/cart';
 
 const userCartStore = useUserCartStore()
 

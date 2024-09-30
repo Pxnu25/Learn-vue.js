@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router';
 import UserLayout from '@/layouts/UserLayout.vue';
 import Close from '@/components/icons/Close.vue';
 
-import { useUserCartStore } from '@/stores/user/cart';
+import { useUserCartStore } from '../../stores/user/cart';
 
 const userCartStore = useUserCartStore()
 

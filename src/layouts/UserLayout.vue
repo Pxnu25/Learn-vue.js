@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'; 
 import { RouterLink, useRouter } from 'vue-router';
 
-import { useUserCartStore } from '@/stores/user/cart';
+import { useUserCartStore } from '../stores/user/cart';
 
 const userCartStore = useUserCartStore()
 

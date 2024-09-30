@@ -5,8 +5,8 @@ import { useRoute, useRouter } from 'vue-router';
 import UserLayout from '@/layouts/UserLayout.vue';
 import Product from '@/components/Product.vue';
 
-import { useUserProductStore } from "@/stores/user/product"
-import { useUserCartStore } from '@/stores/user/cart';
+import { useUserProductStore } from "../../stores/user/product"
+import { useUserCartStore } from '../../stores/user/cart';
 
 const userProductStore = useUserProductStore()
 const userCartStore = useUserCartStore()
