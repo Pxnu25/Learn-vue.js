@@ -27,13 +27,19 @@ export const useAdminProductStore = defineStore("admin-product", {
       localStorage.setItem("admin-products", JSON.stringify(this.list))
     },
     updateProduct (index, productData) {
-      this.list[index].name = productData.name
-      this.list[index].image = productData.image
-      this.list[index].price = productData.price
-      this.list[index].quantity = productData.quantity
-      this.list[index].remainQuantity = productData.quantity
-      this.list[index].status = productData.status
-      this.list[index].updatedAt = new Date().toISOString()
+      const fields = ["name", "image", "price", "quantity", "status"]
+      for (let field of fields) {
+        this.list[index][field] = productData[field]
+      } // Loop for reduce to write if full write see below
+
+      // this.list[index].name = productData.name
+      // this.list[index].image = productData.image
+      // this.list[index].price = productData.price
+      // this.list[index].quantity = productData.quantity
+      // this.list[index].remainQuantity = productData.quantity
+      // this.list[index].status = productData.status
+
+      this.list[index].updatedAt = new Date().toLocaleString()
       localStorage.setItem("admin-products", JSON.stringify(this.list))
     },
     removeProduct (index) {

@@ -49,8 +49,9 @@ onMounted(() => {
                 <li v-for="menu in menus">
                     <RouterLink 
                         :to="{ name: menu.routeName }"
-                        :class="menu.routeName === activeMenu ? 'active' : '' "
-                    >{{ menu.name }}</RouterLink>
+                        :class="menu.routeName === activeMenu ? 'active' : '' ">
+                        {{ menu.name }}
+                    </RouterLink>
                 </li>
             </ul>
         </div>
