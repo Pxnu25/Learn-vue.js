@@ -110,7 +110,7 @@ onMounted(() => {
             </div>
             <div class="flex mt-4 justify-end">
                 <RouterLink :to="{ name: 'admin-products-list' }" class="btn btn-ghost">Back</RouterLink>
-                <button class="btn bg-black text-white " @click="updateProductInPage()">{{ mode }}</button>
+                <button class="btn bg-black text-white" @click="updateProductInPage()">{{ mode }}</button>
             </div>
         </div>
     </AdminLayout>

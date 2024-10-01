@@ -36,8 +36,8 @@ const changeStatus = (index) => {
                 <td>{{ user.updatedAt }}</td>
                 <td>
                     <div class="flex gap-2">
-                        <RouterLink :to="{ name: 'admin-users-update', params: { id:index } }" class="btn">Edit</RouterLink>
-                        <button class="btn" @click="changeStatus(index)">
+                        <RouterLink :to="{ name: 'admin-users-update', params: { id:index } }" class="btn bg-black text-white ">Edit</RouterLink>
+                        <button class="btn bg-black text-white " @click="changeStatus(index)">
                             {{ user.status === "Active" ? "Disable" : "Enable" }}
                         </button>
                     </div>
